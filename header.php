@@ -18,13 +18,11 @@
             </div>
             <nav class ="menu">
                 <ul>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
                     <li><a href="#">Photos</a></li>
                     <li><a href="#">Favourite places</a></li>
                     <li><a href="#">What to eat?</a></li>
                 </ul>
             </nav>
         </header>
-    </div>
-</body>
-</html>

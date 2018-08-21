@@ -88,7 +88,16 @@ header h1 {
     flex-grow: 1;
     margin-right: 15rem; }
     .aboutContent .picture img {
-      max-width: 40rem;
+      max-width: 38rem;
       padding: 5rem; }
+
+#reverse {
+  flex-direction: row-reverse; }
+  #reverse .text {
+    margin-left: 0;
+    margin-right: 15rem; }
+  #reverse .picture {
+    margin-right: 0;
+    margin-left: 15rem; }
 
 /*# sourceMappingURL=style.css.map */
