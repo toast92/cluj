@@ -2,8 +2,12 @@
 
 $dark-brown: #1b1313;
 
+body{
+    color: $dark-brown;
+}
 .wrapper{
     margin: 0 auto;
+    width: 80rem;
 }
 
 header{
@@ -19,9 +23,11 @@ header{
         background-repeat: no-repeat;
         background-position: center center;
     }
+
     h1{
         font-size: 4rem;
         color: whitesmoke;
+        text-transform: uppercase;
     }
 }
 
@@ -32,15 +38,18 @@ header{
         justify-content: center;
         padding: 2rem;
         background-color: whitesmoke;
+
         li{
             text-decoration: none;
             font-family: 'Lora';
+
             a{
                 text-decoration: none;
-                font-size: 1.7rem;
+                font-size: 1.4rem;
                 color: $dark-brown;
                 padding: 3rem;
             }
+
             a:hover { 
                 color: whitesmoke;
                 background-color: $dark-brown;
@@ -52,19 +61,21 @@ header{
 
 .aboutContent{
     display: flex;
+    margin: 2rem 0;
+
     .text{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-grow: 1;
-        margin-left: 15rem;
+        max-width: 40rem;
+        padding: 1.5rem;
+
         p{
-          max-width: 40rem;
-          padding: 5rem;
-          font-family: 'Lora';
-          font-size: 1.1rem;
-          line-height: 1.6;
-          color: $dark-brown;
+            font-family: 'Lora';
+            font-size: 1.1rem;
+            line-height: 1.6;
+            flex-basis: auto;
         }
     }
     .picture{
@@ -72,22 +83,37 @@ header{
         justify-content: center;
         align-items: center;
         flex-grow: 1;
-        margin-right: 15rem;
+        padding: 1.5rem;
+        flex-basis: auto;
+        
         img{
-            max-width: 38rem;
-            padding: 5rem;
+            max-width: 38rem;   
         }
     }
 }
 
-#reverse{
+.aboutContent:nth-child(even) {
     flex-direction: row-reverse;
-    .text{
-        margin-left: 0;
-        margin-right: 15rem;
+}
+
+.photos{
+    display: flex;
+    justify-content: space-around;
+
+    i{
+        font-size: 3.5rem;
     }
-    .picture{
-        margin-right: 0;
-        margin-left: 15rem;
+    .slide{
+        display: flex;
+        align-items: center;
+        
+    }
+    .hidden{
+        display: none;
     }
 }
+
+
+    
+
+    
