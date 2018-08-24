@@ -7,7 +7,8 @@ body{
 }
 .wrapper{
     margin: 0 auto;
-    width: 80rem;
+    max-width: 80rem;
+    position: relative;
 }
 
 header{
@@ -98,18 +99,45 @@ header{
 
 .photos{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
 
     i{
         font-size: 3.5rem;
     }
-    .slide{
+
+    .js-slides{
         display: flex;
         align-items: center;
-        
     }
+
+    img{
+        position: relative;
+        max-width: 100%;
+    }
+
     .hidden{
         display: none;
+    }
+
+    button{
+        position: absolute;
+        z-index: 100;
+
+        &.back{
+            left: 0;
+        }
+
+        &.forward{
+            right: 0;
+        }
+        &.up{
+            top: 0;
+        }
+
+        &.down{
+            bottom: 0;
+        }
     }
 }
 

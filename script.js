@@ -1,31 +1,49 @@
-let currentPicture = 0;
-let slides = document.getElementsByClassName('slide');
+let currentGallery = 0;
+let gallery = document.getElementsByClassName('gallery');
 
-function nextSlide(){
-    currentPicture ++;
+function nextGallery(){
+    currentGallery ++;
     
-    if(currentPicture == slides.length){
-        currentPicture = 0;
+    if(currentGallery == gallery.length){
+        currentGallery = 0;
     }
 
-    for(let i=0; i<slides.length; i++ ){
-        slides[i].classList.add("hidden");
+    for(let i=0; i<gallery.length; i++ ){
+        gallery[i].classList.add("hidden");
 
-        if(i === currentPicture){
-            slides[i].classList.remove('hidden');
+        if(i === currentGallery){
+            gallery[i].classList.remove('hidden');
         }
     }
 }
 
-function previousSlide(){
-    currentPicture --;
+function previousGallery(){
+    currentGallery --;
 
-    if(currentPicture < 0){
-        currentPicture = slides.length-1;
+    if(currentGallery < 0){
+        currentGallery = gallery.length-1;
     }
 
-    for(let i=slides.length-1; i>=0; i-- ){
+    for(let i=gallery.length-1; i>=0; i-- ){
+        gallery[i].classList.add("hidden");
+        if(i === currentGallery){
+            gallery[i].classList.remove('hidden');
+        }
+    }
+}
+
+let currentPicture = 0;
+let slides = document.getElementsByClassName('js-slides');
+
+function slideUp(){
+    currentPicture++;
+    if(currentPicture == slides.length){
+    currentPicture = 0;
+}
+
+    for(let i=0; i<slides.length; i++ ){
         slides[i].classList.add("hidden");
+
         if(i === currentPicture){
             slides[i].classList.remove('hidden');
         }

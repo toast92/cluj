@@ -34,7 +34,8 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  width: 80rem; }
+  max-width: 80rem;
+  position: relative; }
 
 header .title {
   display: flex;
@@ -101,13 +102,28 @@ header h1 {
 
 .photos {
   display: flex;
-  justify-content: space-around; }
+  align-items: center;
+  justify-content: center; }
   .photos i {
     font-size: 3.5rem; }
-  .photos .slide {
+  .photos .js-slides {
     display: flex;
     align-items: center; }
+  .photos img {
+    position: relative;
+    max-width: 100%; }
   .photos .hidden {
     display: none; }
+  .photos button {
+    position: absolute;
+    z-index: 100; }
+    .photos button.back {
+      left: 0; }
+    .photos button.forward {
+      right: 0; }
+    .photos button.up {
+      top: 0; }
+    .photos button.down {
+      bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */
