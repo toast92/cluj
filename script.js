@@ -1,50 +1,67 @@
-let currentGallery = 0;
-let gallery = document.getElementsByClassName('gallery');
+let currentGallery = 1;
+let galleries = document.getElementsByClassName('gallery');
+let galleriesObject = {};
+
+function fillGalleriesObject(){
+    Array.from(galleries).forEach((gallery) => {
+        galleriesObject[gallery.dataset.id] = {
+            id: parseInt(gallery.dataset.id, 10),
+            element: gallery,
+            currentSlide: 0,
+            
+        }
+    });
+}
+
+fillGalleriesObject();
 
 function nextGallery(){
     currentGallery ++;
     
-    if(currentGallery == gallery.length){
-        currentGallery = 0;
+    if(currentGallery > galleries.length){
+        currentGallery = 1;
     }
 
-    for(let i=0; i<gallery.length; i++ ){
-        gallery[i].classList.add("hidden");
-
-        if(i === currentGallery){
-            gallery[i].classList.remove('hidden');
-        }
-    }
+    showCurrentGallery();
 }
 
 function previousGallery(){
     currentGallery --;
 
-    if(currentGallery < 0){
-        currentGallery = gallery.length-1;
+    if(currentGallery < 1){
+        currentGallery = galleries.length;
     }
 
-    for(let i=gallery.length-1; i>=0; i-- ){
-        gallery[i].classList.add("hidden");
-        if(i === currentGallery){
-            gallery[i].classList.remove('hidden');
+    showCurrentGallery();
+}
+
+function showCurrentGallery(){
+    Object.values(galleriesObject).forEach((gallerie) => {
+        gallerie.element.classList.add("hidden");
+
+        if(gallerie.id === currentGallery){
+            gallerie.element.classList.remove('hidden');
         }
+    });
+}
+
+function nextSlide(){
+    let slides = galleriesObject[currentGallery].element.getElementsByClassName('js-slides');
+
+    galleriesObject[currentGallery].currentSlide++;
+    
+    if(galleriesObject[currentGallery].currentSlide === slides.length){
+        galleriesObject[currentGallery].currentSlide = 0;
     }
+
+    showCurrentSlide(slides);
 }
 
-let currentPicture = 0;
-let slides = document.getElementsByClassName('js-slides');
-
-function slideUp(){
-    currentPicture++;
-    if(currentPicture == slides.length){
-    currentPicture = 0;
-}
-
+function showCurrentSlide(slides){
     for(let i=0; i<slides.length; i++ ){
         slides[i].classList.add("hidden");
 
-        if(i === currentPicture){
+        if(i === galleriesObject[currentGallery].currentSlide){
             slides[i].classList.remove('hidden');
         }
     }

@@ -48,10 +48,22 @@ header .title {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
+  @media screen and (max-width: 579px) and (min-width: 0px) {
+    header .title {
+      min-height: 8rem; } }
 header h1 {
   font-size: 4rem;
   color: whitesmoke;
   text-transform: uppercase; }
+  @media screen and (max-width: 1041px) and (min-width: 580px) {
+    header h1 {
+      font-size: 3rem; } }
+  @media screen and (max-width: 579px) and (min-width: 530px) {
+    header h1 {
+      font-size: 2.5rem; } }
+  @media screen and (max-width: 529px) and (min-width: 0px) {
+    header h1 {
+      font-size: 2rem; } }
 
 .menu ul {
   display: flex;
@@ -72,33 +84,46 @@ header h1 {
       background-color: #1b1313;
       opacity: 0.95; }
 
+@media screen and (max-width: 1041px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center; }
+    .menu ul li {
+      margin-bottom: 1rem; }
+      .menu ul li a {
+        padding: 0.75rem;
+        font-size: 1.2rem; } }
 .aboutContent {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 2rem 0; }
+  @media screen and (max-width: 804px) {
+    .aboutContent {
+      flex-direction: column-reverse; } }
   .aboutContent .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    max-width: 40rem;
-    padding: 1.5rem; }
+    flex: 1;
+    padding: 2rem; }
     .aboutContent .text p {
       font-family: 'Lora';
       font-size: 1.1rem;
       line-height: 1.6;
-      flex-basis: auto; }
+      max-width: 100%; }
+      @media screen and (max-width: 900px) {
+        .aboutContent .text p {
+          font-size: 1rem;
+          line-height: 1.4; } }
   .aboutContent .picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    padding: 1.5rem;
-    flex-basis: auto; }
-    .aboutContent .picture img {
-      max-width: 38rem; }
+    flex: 1;
+    padding: 2rem; }
+  .aboutContent img {
+    max-width: 100%; }
 
 .aboutContent:nth-child(even) {
   flex-direction: row-reverse; }
+  @media screen and (max-width: 804px) {
+    .aboutContent:nth-child(even) {
+      flex-direction: column-reverse; } }
 
 .photos {
   display: flex;
@@ -125,5 +150,30 @@ header h1 {
       top: 0; }
     .photos button.down {
       bottom: 0; }
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap; }
+  .restaurants .restaurantWrapper {
+    display: flex; }
+    @media screen and (min-width: 901px) and (max-width: 1025px) {
+      .restaurants .restaurantWrapper {
+        flex-wrap: wrap;
+        max-width: 50%; } }
+    @media screen and (max-width: 900px) {
+      .restaurants .restaurantWrapper {
+        flex-direction: column; } }
+    .restaurants .restaurantWrapper .restaurant {
+      padding: 1rem;
+      min-width: 30%; }
+      .restaurants .restaurantWrapper .restaurant a {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .restaurants .restaurantWrapper .restaurant a img {
+          max-width: 100%; }
+          @media screen and (max-width: 900px) {
+            .restaurants .restaurantWrapper .restaurant a img {
+              max-width: 70%; } }
 
 /*# sourceMappingURL=style.css.map */

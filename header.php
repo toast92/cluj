@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
@@ -19,8 +20,8 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="photos.php">Photos</a></li>
-                <li><a href="#">Favourite places</a></li>
-                <li><a href="#">What to eat?</a></li>
+                <li><a href="places.php">Favourite places</a></li>
+                <li><a href="food.php">What to eat?</a></li>
             </ul>
         </nav>
     </header>
