@@ -9,6 +9,9 @@ body{
     margin: 0 auto;
     max-width: 80rem;
     position: relative;
+    .hidden{
+        display: none;
+    }
 }
 
 header{
@@ -84,7 +87,7 @@ header{
             li{
                 margin-bottom: 1rem;
                 a{
-                    padding:0.75rem;
+                    padding: 0.75rem;
                     font-size: 1.2rem;
                 }
             }
@@ -136,10 +139,27 @@ header{
     }
 }
 
+.thumbnails{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img{
+    width: 20rem;
+    height: 15rem;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.5rem;
+    }
+}
+
 .photos{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
 
     i{
         font-size: 3.5rem;
@@ -149,11 +169,12 @@ header{
         display: flex;
         align-items: center;
     }
-
+    
     img{
-        position: relative;
+        
         max-width: 100%;
     }
+
 
     .hidden{
         display: none;
@@ -184,9 +205,6 @@ header{
     display: flex;
     flex-wrap: wrap;
 
-    .restaurantWrapper{
-        display: flex;
-
         @media screen and (min-width: 901px) and (max-width: 1025px) {
             flex-wrap: wrap;
             max-width: 50%; 
@@ -213,5 +231,6 @@ header{
                 }
             }
         }
-    }
+    
 }
+

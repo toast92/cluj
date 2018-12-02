@@ -1,5 +1,10 @@
 <?php include("header.php"); ?>
-    <div class="photos">
+    <div class="thumbnails">
+        <img class="thumbnail" src="./pics/cluj-piata-muzeului.jpg"/>
+        <img class="thumbnail" src="./pics/cluj-centru.jpg"/>
+        <img class="thumbnail" src="./pics/piata-muzeului.jpg"/>
+    </div>
+    <div class="photos hidden">
         <div class="gallery" data-id="1">
             <img class="js-slides" src="./pics/cluj-piata-muzeului.jpg"/>
             <img class="js-slides hidden" src="./pics/botanical-garden.jpg">
@@ -23,6 +28,9 @@
 
         <button onClick="nextSlide()" class="up"><i class="fas fa-arrow-up"></i></button>
 
-        <!--  <button class="down"><i class="fas fa-arrow-down"></i></button> -->
+        <button onClick="previousSlide()" class="down"><i class="fas fa-arrow-down"></i></button>
     </div>
-<?php include("footer.php"); ?>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

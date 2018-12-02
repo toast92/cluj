@@ -36,6 +36,8 @@ body {
   margin: 0 auto;
   max-width: 80rem;
   position: relative; }
+  .wrapper .hidden {
+    display: none; }
 
 header .title {
   display: flex;
@@ -125,17 +127,29 @@ header h1 {
     .aboutContent:nth-child(even) {
       flex-direction: column-reverse; } }
 
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .thumbnails img {
+    width: 20rem;
+    height: 15rem;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.5rem; }
+
 .photos {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   .photos i {
     font-size: 3.5rem; }
   .photos .js-slides {
     display: flex;
     align-items: center; }
   .photos img {
-    position: relative;
     max-width: 100%; }
   .photos .hidden {
     display: none; }
@@ -154,26 +168,24 @@ header h1 {
 .restaurants {
   display: flex;
   flex-wrap: wrap; }
-  .restaurants .restaurantWrapper {
-    display: flex; }
-    @media screen and (min-width: 901px) and (max-width: 1025px) {
-      .restaurants .restaurantWrapper {
-        flex-wrap: wrap;
-        max-width: 50%; } }
-    @media screen and (max-width: 900px) {
-      .restaurants .restaurantWrapper {
-        flex-direction: column; } }
-    .restaurants .restaurantWrapper .restaurant {
-      padding: 1rem;
-      min-width: 30%; }
-      .restaurants .restaurantWrapper .restaurant a {
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        .restaurants .restaurantWrapper .restaurant a img {
-          max-width: 100%; }
-          @media screen and (max-width: 900px) {
-            .restaurants .restaurantWrapper .restaurant a img {
-              max-width: 70%; } }
+  @media screen and (min-width: 901px) and (max-width: 1025px) {
+    .restaurants {
+      flex-wrap: wrap;
+      max-width: 50%; } }
+  @media screen and (max-width: 900px) {
+    .restaurants {
+      flex-direction: column; } }
+  .restaurants .restaurant {
+    padding: 1rem;
+    min-width: 30%; }
+    .restaurants .restaurant a {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .restaurants .restaurant a img {
+        max-width: 100%; }
+        @media screen and (max-width: 900px) {
+          .restaurants .restaurant a img {
+            max-width: 70%; } }
 
 /*# sourceMappingURL=style.css.map */

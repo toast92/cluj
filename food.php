@@ -1,6 +1,6 @@
 <?php include("header.php"); ?>
     <div class="restaurants">
-        <div class="restaurantWrapper">
+        
             <div class="restaurant">
                 <a target="_blank" href="http://www.martyrestaurants.com/">
                     <img class="thumbnail" src="./pics/marty.jpg"/>
@@ -22,8 +22,8 @@
                     <p>bjsdjskjndfbdhsd jdkfjdb shds dh</p>
                 </a>
             </div>
-        </div>
-        <div class="restaurantWrapper">
+        
+        
             <div class="restaurant">
                 <a target="_blank" href="http://www.martyrestaurants.com/">
                     <img class="thumbnail" src="./pics/marty.jpg"/>
@@ -45,6 +45,6 @@
                     <p>bjsdjskjndfbdhsd jdkfjdb shds dh</p>
                 </a>
             </div>
-        </div>
+        
     </div>
 <?php include("footer.php"); ?>
